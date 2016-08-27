@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Spotify</title>
+  <title>Spotify Fan!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS links -->
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Javascript Frontend Dependencies -->
   <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+
 </head>
 <body>
-  <div>
+  <div id='app-main-container'>
 
-    <h1> Spotify </h1>
+    <!-- Form for Spotify Search -->
+    <div id='form-main-container'>
+      <h2 id='form-heading'> Spotify Fan!</h2>
+      <form id='search-form'>
+        <input id='search-text' type='text' />
+        <input id='search-button' class="btn btn-primary" type='submit' value='Search' />
+      </form>
+    </div>
 
-    <form id='searchForm'>
-      <input id='searchText' type='text' />
-      <button id ='searchButton'>Search</button>
-    </form>
-    <br />
+    <!-- Artist Search Results and Information -->
+    <div id='artist-main-container'>
+      <div id='artists-list-container'>
+        <ul id='artists-list'></ul>
+      </div>
+      <div id='artist-info-container'>
+        <div id='artist-info'></div>
+        <ul id='artist-album-list'></ul>
+      </div>  
+    </div>
 
-    <h2> Search Results </h2>
-    <ul id='artists'>
-    </ul>
-
-    <h2> Artist Info </h2>
-    <ul id='artistInfo'></ul>
+    <!-- Spotify Player Embed -->
+    <div id='player-main-container'>
+    </div>
 
   </div>
-  <script src='app.js'></script>
+
+  <!-- App script -->
+  <script src='./src/app.js'></script>
+
 </body>
 </html>

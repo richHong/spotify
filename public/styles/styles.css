@@ -48,7 +48,56 @@ table {
 }
 
 /* *************************************************** */
+#app-main-container {
+  height: 100vh;
+  width: 100%;
+}
+#form-main-container {
+  border: 1px solid black;
+  margin: 0 auto;
+  text-align: center;
+  height: 20vh;
+  width: 100%;
+}
+#artist-main-container {
+  border: 1px solid black;
+  height: 50vh;
+  width: 100%;
+}
+#player-main-container {
+  border: 1px solid black;
+  text-align: center;
+  height: 30vh;
+  width: 100%;
+}
+#artists-list-container {
+  overflow: scroll;
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+#artist-info-container {
+  overflow: scroll;
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+#search-text {
+  width: 100%;
+  border: 1px solid black;
+}
 .avatar {
-  height: 100px;
-  width: 120px;
+  float:top;
+  height: 120px;
+  width: 100%;
+}
+.artist {
+  border: 1px solid black;
+  height: 30px;
+  font-size: 10px;
+}
+.album {
+  border: 1px solid black;
+  height: 30px;
+  font-size: 10px;
 }

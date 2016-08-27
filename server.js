@@ -8,5 +8,5 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.listen(port, function(){
-  console.log('listening on localhost:'+port);
+  console.log('listening on localhost:' + port);
 });
