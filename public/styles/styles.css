@@ -102,7 +102,7 @@ table {
 #album-info-container {
   border: 1px solid #23CF5F;
   font-size: 3vh;
-  color: white;
+  color: #939393;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
   overflow: scroll;
