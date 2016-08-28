@@ -159,9 +159,6 @@ table {
   height: 6vh;
   font-size: 5vh;
 }
-#artist-info {
-  float: top;
-}
 .logo {
   height: 4vh;
 }
@@ -186,9 +183,9 @@ table {
   font-size: 3vh;
   font-family: 'Montserrat', sans-serif;
 }
-input:focus{
-    outline: none;
-}
 .artist-details {
   color: white;
+}
+input:focus{
+    outline: none;
 }
