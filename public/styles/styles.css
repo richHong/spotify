@@ -71,6 +71,7 @@ table {
   text-align: center;
   height: 30vh;
   width: 100vw;
+  overflow: scroll;
 }
 #artists-list-container {
   overflow: scroll;
