@@ -48,6 +48,7 @@ table {
 }
 
 /* *************************************************** */
+
 #app-main-container {
   background-color: #282828;
   color: #23CF5F;
@@ -101,7 +102,7 @@ table {
 #album-info-container {
   border: 1px solid #23CF5F;
   font-size: 3vh;
-  color: #939393;
+  color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
   overflow: scroll;
@@ -156,7 +157,7 @@ table {
 .artist-name {
   font-size: 4vh;
   font-weight: bold;
-  color: #23CF5F;
+  color: white;
 }
 #search-button {
   color: #282828; 
