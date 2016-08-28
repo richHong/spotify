@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Spotify Fan!</title>
+  <title>Spotify Babay!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS links -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -18,24 +19,25 @@
 
     <!-- Form for Spotify Search -->
     <div id='form-main-container'>
-      <h2 id='form-heading'> Spotify Fan!</h2>
+      <span id='form-heading'><img class='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2000px-Spotify_logo_without_text.svg.png'> Spotify </span>
       <form id='search-form'>
-        <input id='search-text' type='text' />
-        <input id='search-button' class="btn btn-primary" type='submit' value='Search' />
+        <input id='search-text' type='text' placeholder="Search your favorite artist" autocomplete="off" />
+        <input id='search-button' class="search-button" type='submit' value='Search' />
       </form>
     </div>
 
     <!-- Artist Search Results and Information -->
     <div id='artist-main-container'>
       <div id='artists-list-container'>
-        <ul id='artists-list'></ul>
-      </div>
+          <ul id='artists-list'></ul>
+        </div>
       <div id='artist-info-container'>
         <div id='artist-info'></div>
-        <ul id='artist-album-list'></ul>
       </div>  
+      <div id='album-info-container'>
+        <ul id='artist-album-list'></ul>
+      </div>
     </div>
-
     <!-- Spotify Player Embed -->
     <div id='player-main-container'>
     </div>
