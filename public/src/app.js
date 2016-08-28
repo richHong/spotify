@@ -50,8 +50,12 @@ $(document).ready(function(){
     artists = _.uniq(artists, 'name');
     for(var i = 0; i < artists.length; i++ ){
       var artwork;
-      artists[i].images.length ? artwork = '-image: url(' + artists[i].images[0].url +')' : artwork = '-color: #282828';
-      $('#artists-list').append('<li class="artist" style="background'+artwork+';" data-artist-id="' + artists[i].id + '">' + artists[i].name + '</li>');
+      artists[i].images.length ? artwork = `-image: url(${artists[i].images[0].url})` : artwork = '-color: #282828';
+      $('#artists-list').append(`<li class="artist" 
+                                     style="background${artwork};" 
+                                     data-artist-id="${artists[i].id}">
+                                     ${artists[i].name}
+                                 </li>`);
     }
     $('#artists-list-container').scrollTop(0);
 
@@ -59,17 +63,17 @@ $(document).ready(function(){
     $('.artist').on('click', function() {
       state.artistId = $(this).data().artistId;
 
-      $.get('https://api.spotify.com/v1/artists/' + state.artistId, function(data, response){
+      $.get(`https://api.spotify.com/v1/artists/${state.artistId}`, function(data, response){
         state.artist = data;
         renderArtistInfo(state.artist);
       });
 
-      $.get('https://api.spotify.com/v1/artists/' + state.artistId + '/albums', function(data, response){
+      $.get(`https://api.spotify.com/v1/artists/${state.artistId}/albums`, function(data, response){
         state.albums = data.items;
         renderAlbums(state.albums);
       });
 
-      $.get('https://api.spotify.com/v1/artists/' + state.artistId + '/related-artists', function(data, response){
+      $.get(`https://api.spotify.com/v1/artists/${state.artistId}/related-artists`, function(data, response){
         state.relatedArtists = data.artists;
         renderRelatedArtists(state.relatedArtists);
       });
@@ -81,8 +85,12 @@ $(document).ready(function(){
     artists = _.uniq(artists, 'name');
     for(var i = 0; i < artists.length; i++ ){
       var artwork;
-      artists[i].images.length ? artwork = '-image: url(' + artists[i].images[0].url +')' : artwork = '-color: #282828';
-      $('#related-artists-list').append('<li class="related-artist" style="background'+artwork+';" data-artist-id="' + artists[i].id + '">' + artists[i].name + '</li>');
+      artists[i].images.length ? artwork = `-image: url(${artists[i].images[0].url})` : artwork = '-color: #282828';
+      $('#related-artists-list').append(`<li class="related-artist" 
+                                             style="background${artwork};" 
+                                             data-artist-id=${artists[i].id}>
+                                             ${artists[i].name}
+                                          </li>`);
     }
     $('#related-artists-list-container').scrollTop(0);
 
@@ -90,17 +98,17 @@ $(document).ready(function(){
     $('.related-artist').on('click', function() {
       state.artistId = $(this).data().artistId;
 
-      $.get('https://api.spotify.com/v1/artists/' + state.artistId, function(data, response){
+      $.get(`https://api.spotify.com/v1/artists/${state.artistId}`, function(data, response){
         state.artist = data;
         renderArtistInfo(state.artist);
       });
 
-      $.get('https://api.spotify.com/v1/artists/' + state.artistId + '/albums', function(data, response){
+      $.get(`https://api.spotify.com/v1/artists/${state.artistId}/albums`, function(data, response){
         state.albums = data.items;
         renderAlbums(state.albums);
       });
 
-      $.get('https://api.spotify.com/v1/artists/' + state.artistId + '/related-artists', function(data, response){
+      $.get(`https://api.spotify.com/v1/artists/${state.artistId}/related-artists`, function(data, response){
         state.relatedArtists = data.artists;
         renderRelatedArtists(state.relatedArtists);
       });
@@ -111,17 +119,31 @@ $(document).ready(function(){
     $('#artist-info').empty();
     var artwork;
     artist.images.length ? artwork = artist.images[0].url : artwork = './assets/cover.png';
-    $('#artist-info').append('<span class="artist-name">' + artist.name + '</span><br/><br/><br/><span class="artist-details">Followers: ' + artist.followers.total + '</span><br/><span class="artist-details">Popularity: ' + artist.popularity + '</span>');
-    $('#artist-info-container').css('background-image','url(' + artwork + ')');
+    $('#artist-info').append(`<span class="artist-name">
+                                ${artist.name}
+                              </span>
+                              <br/><br/><br/>
+                              <span class="artist-details">
+                                Followers: ${artist.followers.total}
+                              </span><br/>
+                              <span class="artist-details">
+                                Popularity: ${artist.popularity}
+                              </span>`);
+    $('#artist-info-container').css('background-image',`url(${artwork})`);
   }
   // render Albums renders list of albums
   function renderAlbums (albums) {
     $('#artist-album-list').empty();
     albums = _.uniq(albums, 'name');
     for (var j = 0; j < albums.length; j++) {
-      $('#artist-album-list').append('<li class=album style="background-image: url(' + albums[j].images[0].url +');" data-uri="' + albums[j].uri +'">' + albums[j].name + '</li>');
+      $('#artist-album-list').append(`<li class=album 
+                                          style="background-image: url(${albums[j].images[0].url});" 
+                                          data-uri=${albums[j].uri}>
+                                          ${albums[j].name}
+                                      </li>`);
     }
     $('#album-info-container').scrollTop(0);
+
     // Event listener to render player when clicked
     $('.album').on('click', function(){
       var uri = $(this).data().uri;
@@ -131,7 +153,12 @@ $(document).ready(function(){
   // renderPlayer appends player
   function renderPlayer (uri) {
     $('#player-main-container').empty();
-    $('#player-main-container').append('<iframe src="https://embed.spotify.com/?uri='+uri+'" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>')
+    $('#player-main-container').append(`<iframe src="https://embed.spotify.com/?uri=${uri}" 
+                                                width="100%" 
+                                                height="380" 
+                                                frameborder="0" 
+                                                allowtransparency="true">
+                                        </iframe>`);
   }
   // renderNoResultsError appends error to list when no results are found
   function renderNoResultsError() {
