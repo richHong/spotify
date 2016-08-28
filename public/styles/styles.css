@@ -68,6 +68,8 @@ table {
 }
 #player-main-container {
   border: 1px solid #23CF5F;
+  font-size: 1.25em;
+  color: #939393;
   text-align: center;
   height: 30vh;
   width: 100vw;
@@ -75,6 +77,9 @@ table {
 }
 #artists-list-container {
   border: 1px solid #23CF5F;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 1.25em;
+  color: #939393;
   overflow: scroll;
   text-align: center;
   float: left;
@@ -83,6 +88,8 @@ table {
 }
 #artist-info-container {
   border: 1px solid #23CF5F;
+  font-size: 1.25em;
+  color: #939393;
   text-align: center;
   float: left;
   width: 50%;
@@ -91,6 +98,9 @@ table {
 }
 #album-info-container {
   border: 1px solid #23CF5F;
+  font-size: 1.25em;
+  color: #939393;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
   overflow: scroll;
   float: left;
@@ -111,26 +121,18 @@ table {
   height: 20vh;
 }
 .artist {
+  color: white;
   overflow: hidden;
   border: 1px solid #23CF5F;
+  background-size: 100%;
   height: 60px;
-  font-size: 1em;
-  color: #939393;
-}
-.artist:hover {
-  background-color: #23CF5F;
-  color: #282828;
 }
 .album {
+  color: white;
   overflow: hidden;
   border: 1px solid #23CF5F;
+  background-size: 100%;
   height: 60px;
-  font-size: 1em;
-  color: #939393;
-}
-.album:hover {
-  background-color: #23CF5F;
-  color: #282828;
 }
 #form-heading {
   height: 6vh;
@@ -150,7 +152,7 @@ table {
   overflow: hidden;
 }
 .artist-name {
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: bold;
   color: white;
 }

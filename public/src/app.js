@@ -48,7 +48,9 @@ $(document).ready(function(){
     $('#artists-list').empty();
     artists = _.uniq(artists, 'name');
     for(var i = 0; i < artists.length; i++ ){
-      $('#artists-list').append('<li class="artist" data-artist-id="' + artists[i].id + '">' + artists[i].name + '</li>');
+      var artwork;
+      artists[i].images.length ? artwork = '-image: url(' + artists[i].images[0].url +')' : artwork = '-color: #282828';
+      $('#artists-list').append('<li class="artist" style="background'+artwork+';" data-artist-id="' + artists[i].id + '">' + artists[i].name + '</li>');
     }
 
     // onClick event listener when artist is clicked to select current artist
@@ -78,7 +80,7 @@ $(document).ready(function(){
     $('#artist-album-list').empty();
     albums = _.uniq(albums, 'name');
     for (var j = 0; j < albums.length; j++) {
-      $('#artist-album-list').append('<li class=album data-uri="' + albums[j].uri +'">' + albums[j].name + '</li>');
+      $('#artist-album-list').append('<li class=album style="background-image: url(' + albums[j].images[0].url +');" data-uri="' + albums[j].uri +'">' + albums[j].name + '</li>');
     }
 
     $('.album').on('click', function(){
