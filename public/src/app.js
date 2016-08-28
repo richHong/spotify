@@ -53,6 +53,7 @@ $(document).ready(function(){
       artists[i].images.length ? artwork = '-image: url(' + artists[i].images[0].url +')' : artwork = '-color: #282828';
       $('#artists-list').append('<li class="artist" style="background'+artwork+';" data-artist-id="' + artists[i].id + '">' + artists[i].name + '</li>');
     }
+    $('#artists-list-container').scrollTop(0);
 
     // onClick event listener when artist is clicked to select current artist
     $('.artist').on('click', function() {
@@ -83,6 +84,7 @@ $(document).ready(function(){
       artists[i].images.length ? artwork = '-image: url(' + artists[i].images[0].url +')' : artwork = '-color: #282828';
       $('#related-artists-list').append('<li class="artist" style="background'+artwork+';" data-artist-id="' + artists[i].id + '">' + artists[i].name + '</li>');
     }
+    $('#related-artists-list-container').scrollTop(0);
 
     // onClick event listener when artist is clicked to select current artist
     $('.artist').on('click', function() {
