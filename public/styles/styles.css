@@ -167,7 +167,6 @@ table {
   background-color: #23CF5F; 
   font-size: 3vh;
   font-family: 'Montserrat', sans-serif;
-  border: 2px solid black;
 }
 input:focus{
     outline: none;
