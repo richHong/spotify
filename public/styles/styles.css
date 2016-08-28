@@ -114,7 +114,8 @@ table {
   overflow: hidden;
   border: 1px solid #23CF5F;
   height: 60px;
-  font-size: 1.0em;
+  font-size: 1em;
+  color: #939393;
 }
 .artist:hover {
   background-color: #23CF5F;
@@ -124,7 +125,8 @@ table {
   overflow: hidden;
   border: 1px solid #23CF5F;
   height: 60px;
-  font-size: 1.0em;
+  font-size: 1em;
+  color: #939393;
 }
 .album:hover {
   background-color: #23CF5F;
@@ -150,6 +152,7 @@ table {
 .artist-name {
   font-size: 1.5em;
   font-weight: bold;
+  color: white;
 }
 #search-button {
   color:#282828; 
