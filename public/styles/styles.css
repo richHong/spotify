@@ -85,7 +85,18 @@ table {
   text-align: center;
   float: left;
   width: 50%;
-  height: 100%;
+  height: 50%;
+}
+#related-artists-list-container {
+  border: 1px solid #23CF5F;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 3vh;
+  color: #939393;
+  overflow: scroll;
+  text-align: center;
+  float: left;
+  width: 50%;
+  height: 50%;
 }
 #artist-info-container {
   background-size: cover;

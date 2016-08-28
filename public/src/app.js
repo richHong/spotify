@@ -7,7 +7,8 @@ $(document).ready(function(){
     artistId: null,
     artist: null,
     artists: null,
-    albums: null
+    albums: null,
+    relatedArtists: null
   };
 
   /******** Helper Functions *********/
@@ -60,15 +61,49 @@ $(document).ready(function(){
       $.get('https://api.spotify.com/v1/artists/' + state.artistId, function(data, response){
         state.artist = data;
         renderArtistInfo(state.artist);
+      });
 
-        $.get('https://api.spotify.com/v1/artists/' + state.artistId + '/albums', function(data, response){
-          state.albums = data.items;
-          renderAlbums(state.albums);
-        });
+      $.get('https://api.spotify.com/v1/artists/' + state.artistId + '/albums', function(data, response){
+        state.albums = data.items;
+        renderAlbums(state.albums);
+      });
+
+      $.get('https://api.spotify.com/v1/artists/' + state.artistId + '/related-artists', function(data, response){
+        state.relatedArtists = data.artists;
+        renderRelatedArtists(state.relatedArtists);
       });
     });
   }
+  // renderRelatedArtists appends selected artists' related artists list
+  function renderRelatedArtists(artists) {
+    $('#related-artists-list').empty();
+    artists = _.uniq(artists, 'name');
+    for(var i = 0; i < artists.length; i++ ){
+      var artwork;
+      artists[i].images.length ? artwork = '-image: url(' + artists[i].images[0].url +')' : artwork = '-color: #282828';
+      $('#related-artists-list').append('<li class="artist" style="background'+artwork+';" data-artist-id="' + artists[i].id + '">' + artists[i].name + '</li>');
+    }
 
+    // onClick event listener when artist is clicked to select current artist
+    $('.artist').on('click', function() {
+      state.artistId = $(this).data().artistId;
+
+      $.get('https://api.spotify.com/v1/artists/' + state.artistId, function(data, response){
+        state.artist = data;
+        renderArtistInfo(state.artist);
+      });
+
+      $.get('https://api.spotify.com/v1/artists/' + state.artistId + '/albums', function(data, response){
+        state.albums = data.items;
+        renderAlbums(state.albums);
+      });
+
+      $.get('https://api.spotify.com/v1/artists/' + state.artistId + '/related-artists', function(data, response){
+        state.relatedArtists = data.artists;
+        renderRelatedArtists(state.relatedArtists);
+      });
+    });
+  }
   // renderArtistInfo appends selected artist info to div, #artistInfo
   function renderArtistInfo (artist) {
     $('#artist-info').empty();
