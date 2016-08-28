@@ -121,6 +121,7 @@ $(document).ready(function(){
     for (var j = 0; j < albums.length; j++) {
       $('#artist-album-list').append('<li class=album style="background-image: url(' + albums[j].images[0].url +');" data-uri="' + albums[j].uri +'">' + albums[j].name + '</li>');
     }
+    $('#album-info-container').scrollTop(0);
     // Event listener to render player when clicked
     $('.album').on('click', function(){
       var uri = $(this).data().uri;
