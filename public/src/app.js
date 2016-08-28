@@ -82,12 +82,12 @@ $(document).ready(function(){
     for(var i = 0; i < artists.length; i++ ){
       var artwork;
       artists[i].images.length ? artwork = '-image: url(' + artists[i].images[0].url +')' : artwork = '-color: #282828';
-      $('#related-artists-list').append('<li class="artist" style="background'+artwork+';" data-artist-id="' + artists[i].id + '">' + artists[i].name + '</li>');
+      $('#related-artists-list').append('<li class="related-artist" style="background'+artwork+';" data-artist-id="' + artists[i].id + '">' + artists[i].name + '</li>');
     }
     $('#related-artists-list-container').scrollTop(0);
 
     // onClick event listener when artist is clicked to select current artist
-    $('.artist').on('click', function() {
+    $('.related-artist').on('click', function() {
       state.artistId = $(this).data().artistId;
 
       $.get('https://api.spotify.com/v1/artists/' + state.artistId, function(data, response){
@@ -127,7 +127,6 @@ $(document).ready(function(){
       var uri = $(this).data().uri;
       renderPlayer(uri);
     });
-
   }
   // renderPlayer appends player
   function renderPlayer (uri) {
