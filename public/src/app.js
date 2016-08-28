@@ -72,33 +72,36 @@ $(document).ready(function(){
   // renderArtistInfo appends selected artist info to div, #artistInfo
   function renderArtistInfo (artist) {
     $('#artist-info').empty();
-    console.log(artist);
     var artwork;
     artist.images.length ? artwork = artist.images[0].url : artwork = './assets/cover.png';
     $('#artist-info').append('<span class="artist-name">' + artist.name + '</span><br/><br/><br/><span>Followers: ' + artist.followers.total + '</span><br/><span>Popularity: ' + artist.popularity + '</span>');
     $('#artist-info-container').css('background-image','url(' + artwork + ')');
   }
+  // render Albums renders list of albums
   function renderAlbums (albums) {
     $('#artist-album-list').empty();
     albums = _.uniq(albums, 'name');
     for (var j = 0; j < albums.length; j++) {
       $('#artist-album-list').append('<li class=album style="background-image: url(' + albums[j].images[0].url +');" data-uri="' + albums[j].uri +'">' + albums[j].name + '</li>');
     }
-
+    // Event listener to render player when clicked
     $('.album').on('click', function(){
       var uri = $(this).data().uri;
       renderPlayer(uri);
     });
 
   }
+  // renderPlayer appends player
   function renderPlayer (uri) {
     $('#player-main-container').empty();
     $('#player-main-container').append('<iframe src="https://embed.spotify.com/?uri='+uri+'" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>')
   }
+  // renderNoResultsError appends error to list when no results are found
   function renderNoResultsError() {
     $('#artists-list').empty();
     $('#artists-list').append('<li class="error">No search results.</li>');
   }
+  // renderNoQueryError appends error to list when no query data is entered
   function renderNoQueryError() {
     $('#artists-list').empty();
     $('#artists-list').append('<li class="error">Search cannot be empty.</li>');
