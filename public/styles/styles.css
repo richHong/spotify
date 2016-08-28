@@ -141,6 +141,13 @@ table {
   background-size: cover;
   height: 25vh;
 }
+.related-artist {
+  color: white;
+  overflow: hidden;
+  border: 1px solid #23CF5F;
+  background-size: cover;
+  height: 25vh;
+}
 .album {
   color: white;
   overflow: hidden;
