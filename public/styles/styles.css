@@ -171,3 +171,6 @@ table {
 input:focus{
     outline: none;
 }
+.artist-detail {
+  color: white;
+}
