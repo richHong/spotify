@@ -50,7 +50,7 @@ table {
 /* *************************************************** */
 #app-main-container {
   background-color: #282828;
-  color: #6AE368;
+  color: #23CF5F;
   height: 100vh;
   width: 100vw;
   font-family: 'Montserrat', sans-serif;
@@ -62,12 +62,12 @@ table {
   width: 100vw;
 }
 #artist-main-container {
-  border: 1px solid #6AE368;
+  border: 1px solid #23CF5F;
   height: 50vh;
   width: 100vw;
 }
 #player-main-container {
-  border: 1px solid #6AE368;
+  border: 1px solid #23CF5F;
   text-align: center;
   height: 30vh;
   width: 100vw;
@@ -81,7 +81,7 @@ table {
   height: 100%;
 }
 #artist-info-container {
-  border: 1px solid #6AE368;
+  border: 1px solid #23CF5F;
   text-align: center;
   float: left;
   width: 50%;
@@ -89,7 +89,7 @@ table {
   overflow: scroll;
 }
 #album-info-container {
-  border: 1px solid #6AE368;
+  border: 1px solid #23CF5F;
   text-align: center;
   overflow: scroll;
   float: left;
@@ -100,8 +100,8 @@ table {
   width: 100%;
   height: 7vh;
   font-size: 1.5em;
-  border: 1px solid #6AE368;
-  color: #6AE368;
+  border: 1px solid #23CF5F;
+  color: #23CF5F;
   background-color: #282828;
   text-align: center;
 }
@@ -111,22 +111,22 @@ table {
 }
 .artist {
   overflow: hidden;
-  border: 1px solid #6AE368;
+  border: 1px solid #23CF5F;
   height: 60px;
   font-size: 1.0em;
 }
 .artist:hover {
-  background-color: #6AE368;
+  background-color: #23CF5F;
   color: #282828;
 }
 .album {
   overflow: hidden;
-  border: 1px solid #6AE368;
+  border: 1px solid #23CF5F;
   height: 60px;
   font-size: 1.0em;
 }
 .album:hover {
-  background-color: #6AE368;
+  background-color: #23CF5F;
   color: #282828;
 }
 #form-heading {
@@ -140,14 +140,14 @@ table {
   height: 4vh;
 }
 .error {
-  border: 1px solid #6AE368;
+  border: 1px solid #23CF5F;
   height: 60px;
   font-size: 1.25em;
   color: red;
   overflow: hidden;
 }
 .artist-name {
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 #search-button {
@@ -155,7 +155,7 @@ table {
   height:6.5vh; 
   width:100%;
   outline: none; 
-  background-color: #6AE368; 
+  background-color: #23CF5F; 
   font-size: 1.5em;
   font-family: 'Montserrat', sans-serif;
 }
