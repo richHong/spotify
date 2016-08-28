@@ -163,3 +163,6 @@ table {
   font-size: 1.5em;
   font-family: 'Montserrat', sans-serif;
 }
+input:focus{
+    outline: none;
+}
