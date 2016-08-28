@@ -41,7 +41,7 @@ $(document).ready(() => {
           renderNoResultsError();
 
         } else {
-          
+
           state.artists = data.artists.items;
           renderArtists(state.artists);
         }
@@ -70,6 +70,7 @@ $(document).ready(() => {
                                     ${artists[i].name}
                                  </li>`);
     }
+    $('#artists-list-container').hide().show('blind', {direction:'up'});
     $('#artists-list-container').scrollTop(0);
 
     // onClick event listener when artist is clicked to select current artist
@@ -111,6 +112,7 @@ $(document).ready(() => {
                                             ${artists[k].name}
                                           </li>`);
     }
+    $('#related-artists-list-container').hide().show('blind', {direction:'up'});
     $('#related-artists-list-container').scrollTop(0);
 
     // onClick event listener when artist is clicked to select current artist
@@ -154,7 +156,9 @@ $(document).ready(() => {
                               <span class="artist-details">
                                 Popularity: ${artist.popularity}
                               </span>`);
+
     $('#artist-info-container').css('background-image',`url(${artwork})`);
+    $('#artist-info-container').hide().show('puff');
   }
   // render Albums renders list of albums
   function renderAlbums (albums) {
@@ -171,6 +175,7 @@ $(document).ready(() => {
                                         ${albums[j].name}
                                       </li>`);
     }
+    $('#album-info-container').hide().show('blind', {direction:'up'});
     $('#album-info-container').scrollTop(0);
 
     // Event listener to render player when clicked
