@@ -72,9 +72,11 @@ $(document).ready(function(){
   // renderArtistInfo appends selected artist info to div, #artistInfo
   function renderArtistInfo (artist) {
     $('#artist-info').empty();
+    console.log(artist);
     var artwork;
     artist.images.length ? artwork = artist.images[0].url : artwork = './assets/cover.png';
-    $('#artist-info').append('<span class="artist-name">' + artist.name + '</span><br /><img class="avatar" src="' + artwork + '"/>');
+    $('#artist-info').append('<span class="artist-name">' + artist.name + '</span><br/><br/><br/><span>Followers: ' + artist.followers.total + '</span><br/><span>Popularity: ' + artist.popularity + '</span>');
+    $('#artist-info-container').css('background-image','url(' + artwork + ')');
   }
   function renderAlbums (albums) {
     $('#artist-album-list').empty();

@@ -68,7 +68,7 @@ table {
 }
 #player-main-container {
   border: 1px solid #23CF5F;
-  font-size: 1.25em;
+  font-size: 3vh;
   color: #939393;
   text-align: center;
   height: 30vh;
@@ -78,7 +78,7 @@ table {
 #artists-list-container {
   border: 1px solid #23CF5F;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-size: 1.25em;
+  font-size: 3vh;
   color: #939393;
   overflow: scroll;
   text-align: center;
@@ -87,8 +87,10 @@ table {
   height: 100%;
 }
 #artist-info-container {
+  background-size: cover;
   border: 1px solid #23CF5F;
-  font-size: 1.25em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 3vh;
   color: #939393;
   text-align: center;
   float: left;
@@ -98,7 +100,7 @@ table {
 }
 #album-info-container {
   border: 1px solid #23CF5F;
-  font-size: 1.25em;
+  font-size: 3vh;
   color: #939393;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
@@ -110,7 +112,7 @@ table {
 #search-text {
   width: 100%;
   height: 7vh;
-  font-size: 1.5em;
+  font-size: 3vh;
   border: 1px solid #23CF5F;
   color: #23CF5F;
   background-color: #282828;
@@ -118,25 +120,25 @@ table {
 }
 .avatar {
   float:top;
-  height: 20vh;
+  height: 10vh;
 }
 .artist {
   color: white;
   overflow: hidden;
   border: 1px solid #23CF5F;
-  background-size: 100%;
-  height: 60px;
+  background-size: cover;
+  height: 25vh;
 }
 .album {
   color: white;
   overflow: hidden;
   border: 1px solid #23CF5F;
-  background-size: 100%;
-  height: 60px;
+  background-size: cover;
+  height: 25vh;
 }
 #form-heading {
   height: 6vh;
-  font-size: 30px;
+  font-size: 5vh;
 }
 #artist-info {
   float: top;
@@ -147,22 +149,22 @@ table {
 .error {
   border: 1px solid #23CF5F;
   height: 60px;
-  font-size: 1.25em;
+  font-size: 3vh;
   color: red;
   overflow: hidden;
 }
 .artist-name {
-  font-size: 1.25em;
+  font-size: 4vh;
   font-weight: bold;
-  color: white;
+  color: #23CF5F;
 }
 #search-button {
-  color:#282828; 
-  height:6.5vh; 
-  width:100%;
+  color: #282828; 
+  height: 6.5vh; 
+  width: 100%;
   outline: none; 
   background-color: #23CF5F; 
-  font-size: 1.5em;
+  font-size: 3vh;
   font-family: 'Montserrat', sans-serif;
 }
 input:focus{
