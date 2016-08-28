@@ -71,7 +71,7 @@ $(document).ready(function(){
   function renderArtistInfo (artist) {
     $('#artist-info').empty();
     var artwork;
-    artist.images.length ? artwork = artist.images[0].url : artwork = 'http://i.imgur.com/nszu54A.jpg';
+    artist.images.length ? artwork = artist.images[0].url : artwork = './assets/cover.png';
     $('#artist-info').append('<span class="artist-name">' + artist.name + '</span><br /><img class="avatar" src="' + artwork + '"/>');
   }
   function renderAlbums (albums) {
