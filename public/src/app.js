@@ -85,6 +85,7 @@ $(document).ready(() => {
       $.get(`https://api.spotify.com/v1/artists/${state.artistId}/albums`, (data, response) => {
         state.albums = data.items;
         renderAlbums(state.albums);
+        renderPlayer(state.albums[0].uri);
       });
 
       $.get(`https://api.spotify.com/v1/artists/${state.artistId}/related-artists`, (data, response) => {
