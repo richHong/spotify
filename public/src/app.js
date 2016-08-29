@@ -113,7 +113,7 @@ $(document).ready(() => {
                                             ${artists[k].name}
                                           </li>`);
     }
-    $('#related-artists-list-container').hide().show('blind', {direction:'up'}, 2000);
+    $('#related-artists-list-container').hide().show('blind', {direction:'up'}, 1000);
     $('#related-artists-list-container').scrollTop(0);
 
     // onClick event listener when artist is clicked to select current artist
@@ -177,7 +177,7 @@ $(document).ready(() => {
                                         ${albums[j].name}
                                       </li>`);
     }
-    $('#album-info-container').hide().show('blind', {direction:'up'}, 2000);
+    $('#album-info-container').hide().show('blind', {direction:'up'}, 1000);
     $('#album-info-container').scrollTop(0);
 
     // Event listener to render player when clicked
@@ -195,7 +195,7 @@ $(document).ready(() => {
                                           frameborder="0" 
                                           allowtransparency="true">
                                         </iframe>`);
-    $('#player-main-container').hide().show('blind', {direction:'down'}, 2000);
+    $('#player-main-container').hide().show('blind', {direction:'down'}, 1000);
   }
   // renderNoResultsError appends error to list when no results are found
   function renderNoResultsError() {
