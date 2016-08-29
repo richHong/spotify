@@ -70,7 +70,7 @@ $(document).ready(() => {
                                     ${artists[i].name}
                                  </li>`);
     }
-    $('#artists-list-container').hide().show('blind', {direction:'up'}, 2000);
+    $('#artists-list-container').hide().show('blind', {direction:'up'}, 1000);
     $('#artists-list-container').scrollTop(0);
 
     // onClick event listener when artist is clicked to select current artist
