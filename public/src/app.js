@@ -195,7 +195,7 @@ $(document).ready(() => {
                                           frameborder="0" 
                                           allowtransparency="true">
                                         </iframe>`);
-    $('#player-main-container').hide().show('blind', {direction:'down'});
+    $('#player-main-container').hide().show('blind', {direction:'down'}, 2000);
   }
   // renderNoResultsError appends error to list when no results are found
   function renderNoResultsError() {
